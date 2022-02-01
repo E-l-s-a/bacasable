@@ -1,0 +1,72 @@
+h1 {
+  color: #8a8af3;
+  font-size: 4rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media screen and (max-width: 575px) {
+  .container {
+    flex-direction: column;
+  }
+}
+.container .item {
+  flex-basis: 20%;
+}
+@media screen and (max-width: 767px) {
+  .container .item {
+    flex-basis: 100%;
+  }
+}
+
+figure {
+  position: relative;
+}
+figure img {
+  width: 100%;
+}
+figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+figure figcaption:hover {
+  background-color: purple;
+}
+
+.btn {
+  color: white;
+  background-color: #8a8af3;
+  border: 0.1rem solid #8a8af3;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 1rem;
+  display: inline-block;
+}
+.btn:hover {
+  background-color: transparent;
+  color: #8a8af3;
+}
+
+.btn-success {
+  color: white;
+  background-color: #0f5e0f;
+  border: 0.1rem solid #0f5e0f;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 1rem;
+  display: inline-block;
+}
+.btn-success:hover {
+  background-color: transparent;
+  color: #0f5e0f;
+}
+
+/*# sourceMappingURL=main.css.map */

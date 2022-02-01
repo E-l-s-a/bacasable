@@ -1,0 +1,79 @@
+/* Ajustement de la valeur par defaut du rem face ou px pour des calcules usper simples */
+html{
+    font-size : 62,5%;
+    /* désormais avec la ligne ci-dessus 1 rem = 10px au lieu de 16px. */
+}
+
+body{
+    /* taille par défaut pour éviter d'avoir tous les éléments avec une taille définie à 10px */
+    font-size: 1.6rem;
+}
+
+main{
+    background-color: rgb(201, 196, 196);
+    /* Exemple de l'unité vh */
+    min-height: 100vh;
+}
+
+h1{
+    /* Taille à 45px */
+    font-size: 4.5rem;
+}
+
+/* Test de flexbox */
+.container{
+    display: flex;
+    /* flew wrap = possibilité d'avoir plusieurs lignes */
+    flex-wrap: wrap;
+    background-color: pink;
+    justify-content: space-between;
+}
+
+.item{
+    flex-basis: 20%;
+    background-color: rgb(58, 106, 178);
+}
+
+/* Affichage 2 éléments par ligne sur tablette */
+@media screen and (min-width : 768px) and (max-width:991px) {
+    .item{
+        flex-basis: 45%;
+    }   
+}
+
+/* Affichage sur mobile */
+@media screen and (max-width: 575px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .item{
+        flex-basis: 100%;
+    }
+}
+
+/* exemple test de positionnement */
+
+figure{
+    /* on positionne l'élément et donc la léende va se positionner par rapport à ce container */
+    position: relative;
+    
+}
+
+
+figure img{
+    /* images responsives : L'image fera toujours 100% de la argeur de son conteneur (on ne renseigne pas la hauteur  */
+    width: 100%;    
+}
+
+figcaption{
+    /* Comment doit se positionnze l'élément? */
+    position: absolute;
+    /* Où doit se positionner l'élément ? */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(243, 98, 98);
+    color: white;
+    padding: 0.5rem 1rem;
+}
